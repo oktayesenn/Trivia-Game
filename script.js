@@ -1,6 +1,14 @@
 console.log("trivia");
 const questionText = document.querySelector("#question")
 const answerContainer = document.querySelector("#answer-container")
+let score = 0
+const scoreText = document.querySelector('#score')
+
+// let btn = document.createElement("button");
+// btn.innerHTML = "Next";
+// document.body.appendChild(btn);
+// // btn = document.nextQuestion()
+
 console.log(answerContainer);
 console.log(questionText);
 const questions = [
@@ -81,8 +89,8 @@ function checkAnswers (event) {
     if (correctAnswer === elementID ) {
         console.log(`This is ${correctAnswer}`)
         console.log('element');
-  
-
+        score ++ ;
+        scoreText.innerText = `Score: ${score}`
     } else {
         console.log('incorrectAnswer')
     }
@@ -91,15 +99,29 @@ function checkAnswers (event) {
 
 function nextQuestion () {
     questionNumber ++;
-    const answerText = document.querySelectorAll('p');
-    answerText.forEach(answer => {
-        answer.remove();
-    })
-    displayQuestion();
-
-    console.log("nextQuestion");
-
+    if(!lastQuestion() ){
+        const answerText = document.querySelectorAll('p');
+        answerText.forEach(answer => {
+            answer.remove();
+        })
+        displayQuestion();
+        console.log("nextQuestion");
+    } else { 
+        scoreText.innerText = `Score: ${score}`
+        console.log(score)
+    }
     
-
 }
-console.log('nextQuestion');
+function lastQuestion () {
+    let lastQuestion = questions.length
+    if ( lastQuestion === questionNumber ) {
+        console.log("Game is over");
+        return true ;
+    }
+}
+
+function timer() {
+    setTimeout(setAlert, 4000);
+    console.log(timer)
+}
+
