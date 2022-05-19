@@ -3,6 +3,7 @@ const questionText = document.querySelector("#question")
 const answerContainer = document.querySelector("#answer-container")
 let score = 0
 const scoreText = document.querySelector('#score')
+const setStatusClass = document.body
 
 // let btn = document.createElement("button");
 // btn.innerHTML = "Next";
@@ -120,8 +121,19 @@ function lastQuestion () {
     }
 }
 
-function timer() {
-    setTimeout(setAlert, 4000);
-    console.log(timer)
-}
+// function setStatusClass () {
+//     if ('click', correct ) {
+//     setStatusClass.style.backgroundcolor = 'blue',
+//     } else ('click', incorrect) {
+//         setStatusClass.style.backgroundcolor = 'red'
+//     } console.log(setStatusClass);
+// }
 
+// function setStatusClass(element, correct){
+//     clearStatusClass (element)
+//     if (correct) {
+//         element.setStatusClass.add('correct')
+//     } else {
+//         element.setStatusClass.add('incorrect')
+//     }
+// // }
