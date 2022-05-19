@@ -14,7 +14,7 @@ console.log(answerContainer);
 console.log(questionText);
 const questions = [
     {
-        question : "Whos is first president in Us ?",
+        question : "Whos is first president of Us ?",
         answers : ["George Washington", "Benjamin Franklin", "Barrack H. Obama"],
         correct : 0
     },
