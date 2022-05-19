@@ -5,7 +5,7 @@ console.log(answerContainer);
 console.log(questionText);
 const questions = [
     {
-        question : "Whos i first president in Us ?",
+        question : "Whos is first president in Us ?",
         answers : ["George Washington", "Benjamin Franklin", "Barrack H. Obama"],
         correct : 0
     },
@@ -14,8 +14,48 @@ const questions = [
         answers : ["Red", "Blue", "Black"],
         correct : 1
     },
-    
+    {
+        question : "2 + 2 = ?",
+        answers : ["2", "3", "4"],
+        correct : 2
+    },
+    {
+        question : "Where is the Empire State Building ?",
+        answers : ["Seoul", "CanCun", "New York"],
+        correct : 2
+    },
+    {
+        question : "Who is SpongeBob’s best friend?",
+        answers : ["Donald Jr Trump", "Patrick Star", "Micheal Jackson"],
+        correct : 4
+    },
+    {
+        question : "What is the name of Harry Potter’s father?",
+        answers : ["John Potter", "Alex Potter", "James Potter"],
+        correct : 2
+    },
+    {
+        question : "Which Disney princess lost her shoe?",
+        answers : ["Cinderella", "Mickey", "Garfield"],
+        correct : 6
+    },
+    {
+        question : "Who is the real Spider-Man ?",
+        answers : ["tobey maguire", "Andrew Garfield", "Jim Carey"],
+        correct : 0
+    },
+    {
+        question : "How many states are in the United States of America?",
+        answers : ["44", "45", "50"],
+        correct : 2
+    },
+    {
+        question : "How many rings are there in the Olympics logo?",
+        answers : ["3", "5", "6"],
+        correct : 1
+    }  
 ]
+
 let questionNumber = 0
 
 
@@ -39,11 +79,27 @@ function checkAnswers (event) {
     let correctAnswer = questions[questionNumber].correct
     console.log(event.target.id);
     if (correctAnswer === elementID ) {
-        console.log('correctAnswer')
-    } 
+        console.log(`This is ${correctAnswer}`)
+        console.log('element');
+  
+
+    } else {
+        console.log('incorrectAnswer')
+    }
+    nextQuestion();
 }
 
 function nextQuestion () {
-    console.log("nextQuestion");
-}
+    questionNumber ++;
+    const answerText = document.querySelectorAll('p');
+    answerText.forEach(answer => {
+        answer.remove();
+    })
+    displayQuestion();
 
+    console.log("nextQuestion");
+
+    
+
+}
+console.log('nextQuestion');
