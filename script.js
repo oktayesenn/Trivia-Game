@@ -36,7 +36,7 @@ const questions = [
     {
         question : "Who is SpongeBob’s best friend?",
         answers : ["Donald Jr Trump", "Patrick Star", "Micheal Jackson"],
-        correct : 4
+        correct : 1
     },
     {
         question : "What is the name of Harry Potter’s father?",
@@ -46,7 +46,7 @@ const questions = [
     {
         question : "Which Disney princess lost her shoe?",
         answers : ["Cinderella", "Mickey", "Garfield"],
-        correct : 6
+        correct : 0
     },
     {
         question : "Who is the real Spider-Man ?",
@@ -62,7 +62,37 @@ const questions = [
         question : "How many rings are there in the Olympics logo?",
         answers : ["3", "5", "6"],
         correct : 1
-    }  
+    },
+    {
+        question : "What is the name of the biggest technology company in South Korea??",
+        answers : ["Nokia", "Samsung", "Apple"],
+        correct : 1
+    },
+    {
+        question : "Which animal can be seen on the Porsche logo?",
+        answers : ["Horse", "Bird", "Alligator"],
+        correct : 0
+    },
+    {
+        question : "What is the name of the largest ocean on earth?",
+        answers : ["Pacific Ocean", "Atlantic Ocean", "Michigan Lake"],
+        correct : 0
+    },  
+    {
+        question : "How many languages are written from right to left?",
+        answers : ["44", "12", "50"],
+        correct : 1
+    },
+    {
+        question : "What does “www” stand for in a website browser?",
+        answers : ["World Wide Web", "12", "50"],
+        correct : 0
+    },
+    {
+        question : "What geometric shape is generally used for stop signs?",
+        answers : ["Triangle", "Octagon", "Square"],
+        correct : 1
+    }
 ]
 
 let questionNumber = 0
@@ -91,8 +121,10 @@ function checkAnswers (event) {
         console.log(`This is ${correctAnswer}`)
         console.log('element');
         score ++ ;
+        // checkAnswers.style.backgroundColor.appendChild(questionText) = 'green'
         scoreText.innerText = `Score: ${score}`
     } else {
+        
         console.log('incorrectAnswer')
     }
     nextQuestion();
