@@ -1,4 +1,4 @@
-# Project: tic tac toe
+# Project: Trivia
 
 ## Installation: 
 No need.
@@ -8,7 +8,7 @@ No need.
 ![](image/Wireframe.jpeg)
 
 
-- [Game link](https://github.com/oktayesenn/Trivia-Game).
+- [Game link](https://cheerful-kangaroo-5a3a81.netlify.app/index.html).
 
 
 ## Preview
